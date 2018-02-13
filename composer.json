@@ -10,8 +10,8 @@
     }
   ],
   "require": {
-    "ahmetgunes/scheduledevent": "^0.1.0",
-    "davidpersson/beanstalk": "^2.0"
+    "davidpersson/beanstalk": "^2.0",
+    "ahmetgunes/scheduledevent": "^0.2.2"
   },
   "autoload": {
     "psr-4": {

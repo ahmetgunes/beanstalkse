@@ -43,7 +43,7 @@ class BeanStalkManager implements QueueManagerInterface
             throw new ScheduledEventException('Wrong formatted message is passed to the manager.');
         }
 
-        list($payload, $priority) = $message->convert();
+        list($payload, $priority) = BeanStalkMessageSerializer::convert($message);
 
         return $this->mq->put($priority, 0, 60, $payload);
     }
@@ -52,7 +52,7 @@ class BeanStalkManager implements QueueManagerInterface
     {
         while (true) {
             $job = $this->mq->reserve();
-            $message = BeanStalkMessage::deConvert($job);
+            $message = BeanStalkMessageSerializer::deConvert($job);
             //If designated date didn't arrive yet delete the job and republish
             if (!is_null($message->getDesignatedDate()) && $message->getDesignatedDate() > time()) {
                 $this->mq->delete($job['id']);
