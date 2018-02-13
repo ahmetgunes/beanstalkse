@@ -1,0 +1,21 @@
+{
+  "name": "ahmetgunes/beanstalkdse",
+  "description": "Beanstalkd Manager for ScheduledEvents",
+  "type": "library",
+  "license": "Apache-2.0",
+  "authors": [
+    {
+      "name": "Ahmet Güneş",
+      "email": "ahmetgunes@mail.com"
+    }
+  ],
+  "require": {
+    "ahmetgunes/scheduledevent": "^0.1.0",
+    "davidpersson/beanstalk": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "BeanStalkEvent\\": "src/"
+    }
+  }
+}
