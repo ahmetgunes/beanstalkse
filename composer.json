@@ -1,6 +1,6 @@
 {
-  "name": "ahmetgunes/beanstalkdse",
-  "description": "Beanstalkd Manager for ScheduledEvents",
+  "name": "ahmetgunes/beanstalkse",
+  "description": "Beanstalk Manager for ScheduledEvents",
   "type": "library",
   "license": "Apache-2.0",
   "authors": [
